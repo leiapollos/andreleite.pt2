@@ -38,7 +38,8 @@ header h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #23b6cc;
+  background: #23b6cc;
+  background: linear-gradient(0deg, #23b6cc 25%, #22a9bd 34%);
   z-index: -999;
 }
 
