@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #23b6cc;
+  position: relative;
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+.animation {
+  height: 100vh;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-plane {
+  height: 200px;
+  position: relative;
+  top: 50%;
+  left: 0%;
+}
+
+.background-parallax {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #23b6cc;
+  z-index: -999;
+}
+
+#logo-name {
+  height: 100vh;
+}
+
+#logo-name g:nth-child(n) {
+  display: none;
+  width: auto;
+}
+
+.smaller-letters path:nth-child(n) {
+  transform: scale(0.85) translateX(3%);
+  transform-origin: center;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+.toy {
+  width: 300px;
+  opacity: 1;
+  animation: 0.5s ease-out 0s slideInFromRight;
+  transform-origin: center;
+  margin-left: 10%;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

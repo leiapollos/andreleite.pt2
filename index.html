@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>GSAP Scroll</title>
+  </head>
+  <body>
+    <header id="parallax" class="background-parallax">
+      <svg
+        id="logo-name"
+        width="816"
+        height="107"
+        viewBox="0 0 816 107"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          class="parallax smaller-letters"
+          data-depth="0.1"
+          stroke="white"
+          stroke-width="5"
+        >
+          <path
+            d="M772.442 14.288V47.84H809.018V58.64H772.442V93.2H813.338V104H759.338V3.488H813.338V14.288H772.442Z"
+          />
+          <path
+            d="M743.208 3.632V14.288H715.848V104H702.744V14.288H675.24V3.632H743.208Z"
+          />
+          <path d="M659.098 3.632V104H645.994V3.632H659.098Z" />
+          <path
+            d="M585.27 14.288V47.84H621.846V58.64H585.27V93.2H626.166V104H572.166V3.488H626.166V14.288H585.27Z"
+          />
+          <path d="M523.114 93.344H558.25V104H510.01V3.632H523.114V93.344Z" />
+        </g>
+
+        <image
+          href="./images/chicken.png"
+          x="320"
+          y="-100"
+          class="toy parallax"
+          data-depth="0.2"
+        />
+        <g class="parallax" data-depth="0.3" stroke="white" stroke-width="5">
+          <path
+            d="M410.895 14.288V47.84H447.471V58.64H410.895V93.2H451.791V104H397.791V3.488H451.791V14.288H410.895Z"
+          />
+          <path
+            d="M363.03 104L339.126 62.96H323.286V104H310.182V3.632H342.582C350.166 3.632 356.55 4.928 361.734 7.52C367.014 10.112 370.95 13.616 373.542 18.032C376.134 22.448 377.43 27.488 377.43 33.152C377.43 40.064 375.414 46.16 371.382 51.44C367.446 56.72 361.494 60.224 353.526 61.952L378.726 104H363.03ZM323.286 52.448H342.582C349.686 52.448 355.014 50.72 358.566 47.264C362.118 43.712 363.894 39.008 363.894 33.152C363.894 27.2 362.118 22.592 358.566 19.328C355.11 16.064 349.782 14.432 342.582 14.432H323.286V52.448Z"
+          />
+          <path
+            d="M239.617 3.632C250.561 3.632 260.017 5.696 267.985 9.82399C276.049 13.856 282.193 19.664 286.417 27.248C290.737 34.832 292.897 43.76 292.897 54.032C292.897 64.304 290.737 73.232 286.417 80.816C282.193 88.304 276.049 94.064 267.985 98.096C260.017 102.032 250.561 104 239.617 104H208.369V3.632H239.617ZM239.617 93.2C252.577 93.2 262.465 89.792 269.281 82.976C276.097 76.064 279.505 66.416 279.505 54.032C279.505 41.552 276.049 31.808 269.137 24.8C262.321 17.792 252.481 14.288 239.617 14.288H221.473V93.2H239.617Z"
+          />
+          <path
+            d="M186.031 104H172.927L120.223 24.08V104H107.119V3.488H120.223L172.927 83.264V3.488H186.031V104Z"
+          />
+          <path
+            d="M69.416 81.68H25.64L17.576 104H3.75201L40.04 4.208H55.16L91.304 104H77.48L69.416 81.68ZM65.672 71.024L47.528 20.336L29.384 71.024H65.672Z"
+          />
+        </g>
+      </svg>
+    </header>
+    <section class="animation">
+      <img class="paper-plane" src="./images/camera.png" alt="Paper Plane" />
+    </section>
+    <footer>
+      <!--img
+        class="background-parallax"
+        style="z-index: 2;"
+        src="./images/trees.JPG"
+      /-->
+      <h1>Woo!</h1>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
