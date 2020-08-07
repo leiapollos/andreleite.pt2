@@ -71,7 +71,7 @@ header h1 {
   }
 }
 .toy {
-  width: 300px;
+  width: 900px;
   opacity: 1;
   animation: 0.5s ease-out 0s slideInFromRight;
   transform-origin: center;
