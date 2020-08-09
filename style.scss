@@ -1,13 +1,14 @@
+@import "./scss/mediaQuery.scss";
+@import "./scss/color.scss";
+@import "./scss/navbar.scss";
+@import "./scss/hero.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-$blue: #23b6cc;
-$green: #45ffb0;
-$grey: #8dbbc2;
-$light-orange: #ff8585;
 
 header,
 footer {
@@ -15,7 +16,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
   background-color: $blue;
   position: relative;
 }
@@ -33,70 +33,4 @@ header h1 {
   position: relative;
   top: 50%;
   left: 0%;
-}
-
-.background-parallax {
-  //background-image: url("./images/olympus-om1-dark_4k.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background: rgb(35, 182, 204);
-  background: linear-gradient(
-    0deg,
-    rgba(35, 182, 204, 1) 25%,
-    rgba(34, 169, 189, 1) 34%
-  );
-  z-index: -999;
-}
-
-#logo-name {
-  height: 100vh;
-}
-
-#logo-name g:nth-child(n) {
-  display: none;
-  width: auto;
-}
-
-.smaller-letters path:nth-child(n) {
-  transform: scale(0.85) translateX(3%);
-  transform-origin: center;
-}
-
-@keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
-}
-
-$toyOpacity: 1;
-$toyScaling: 1.5;
-
-.toy {
-  width: 900px;
-  opacity: $toyOpacity;
-  animation: 0.5s ease-out 0s slideInFromRight;
-  transform-origin: center;
-  margin-left: 10%;
-}
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: scale($toyScaling);
-  }
-  to {
-    opacity: $toyOpacity;
-    transform: scale(1);
-  }
 }

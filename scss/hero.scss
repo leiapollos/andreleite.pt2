@@ -1,0 +1,56 @@
+.background-parallax {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background: $background-color-hero;
+  z-index: -999;
+}
+
+#logo-name {
+  height: 100vh;
+  g:nth-child(n) {
+    display: none;
+    width: auto;
+  }
+  .smaller-letters path:nth-child(n) {
+    transform: scale(0.85) translateX(3%);
+    transform-origin: center;
+  }
+
+  @keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: white;
+    }
+  }
+
+  $toyOpacity: 1;
+  $toyScaling: 1.5;
+
+  .toy {
+    width: 900px;
+    opacity: $toyOpacity;
+    animation: 0.5s ease-out 0s scaleDownOnEntry;
+    transform-origin: center;
+    margin-left: 10%;
+  }
+  @keyframes scaleDownOnEntry {
+    from {
+      opacity: 0;
+      transform: scale($toyScaling);
+    }
+    to {
+      opacity: $toyOpacity;
+      transform: scale(1);
+    }
+  }
+}
