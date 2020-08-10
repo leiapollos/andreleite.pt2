@@ -53,7 +53,7 @@ document.querySelectorAll("#logo-name")[0].style.animation =
   "s";
 //Path animation for each letter
 for (let i = 0; i < logo.length; i++) {
-  console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+  //console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
   var delayIndex = logo.length - i - 1;
   var path = logo[i],
     length = path.getTotalLength();
@@ -110,7 +110,6 @@ const navSlide = () => {
           index / 5 + 0.2
         }s`;
       }
-      console.log(index / 7);
     });
 
     //Burger Animation

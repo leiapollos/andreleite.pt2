@@ -14,6 +14,12 @@ nav {
 nav .logo {
   color: white;
   margin-left: 5%;
+  position: relative;
+  display: flex;
+}
+nav .logo .logo-image {
+  width: 25px;
+  height: 25px;
 }
 nav .nav-links {
   display: flex;
@@ -23,12 +29,21 @@ nav .nav-links {
 nav .nav-links li {
   list-style: none;
 }
+nav .nav-links li:hover .underline {
+  transform: scale(0.7);
+}
 nav .nav-links a {
   color: white;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
   font-size: 14px;
+}
+nav .nav-links .underline {
+  background-color: white;
+  height: 2px;
+  width: 100%;
+  transform: scale(0);
+  transition: transform 0.4s ease;
 }
 nav .burger {
   display: none;
