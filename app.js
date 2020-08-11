@@ -38,8 +38,8 @@ const scene = new ScrollMagic.Scene({
 /////////////////////////////////////////////////////////////////////
 
 const logo = document.querySelectorAll("#logo-name path");
-var animationLengthTime = 2;
-var animationDelayTime = 0.3;
+var animationLengthTime = 1.6;
+var animationDelayTime = 0.25;
 var fillAnimationTime = 0.5;
 var fillAnimationDelayTime =
   animationLengthTime + logo.length * animationDelayTime;
