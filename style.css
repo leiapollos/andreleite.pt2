@@ -270,10 +270,23 @@ header h1 {
 }
 
 .paper-plane {
-  height: 200px;
+  height: 100px;
   position: relative;
-  top: 50%;
-  left: 0%;
+  top: 90%;
+  left: 0;
+}
+
+.line {
+  position: relative;
+  top: 84%;
+  left: 50px;
+  width: 100%;
+}
+@media (max-width: 452px) {
+  .line {
+    top: 78%;
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,22 +4,23 @@
 gsap.registerPlugin(MotionPathPlugin);
 
 const tween = gsap.timeline();
+const bottom =  0;
+const width = window.innerWidth;
 tween.to(".paper-plane", {
-  duration: 4,
+  duration: 7,
   ease: Linear.easeNone,
   motionPath: {
     path: [
-      { x: 100, y: -20 },
-      { x: 300, y: 10 },
-      { x: 500, y: 100 },
-      { x: 750, y: -100 },
-      { x: 350, y: -50 },
-      { x: 600, y: 100 },
-      { x: 800, y: 0 },
-      { x: window.innerWidth, y: -250 },
+      { x: width * 0, y: bottom },
+      { x: width * 0.1, y: bottom },
+      { x: width * 0.3, y: bottom },
+      { x: width * 0.4, y: bottom },
+      { x: width * 0.6, y: bottom },
+      { x: width * 0.7, y: bottom },
+      { x: width * 0.9, y: bottom },
     ],
-    curviness: 0.99,
-    autoRotate: true,
+    curviness: 1.0,
+    autoRotate: false,
   },
 });
 
@@ -32,6 +33,14 @@ const scene = new ScrollMagic.Scene({
   .setTween(tween)
   .setPin(".animation")
   .addTo(controller);
+
+scene.on("progress", function (event) {
+
+    const line = document.getElementById("line");
+    //line.style.width = (event.progress*100).toString() + "%";
+    line.style.strokeDashoffset = ((1920-(event.progress*1920*0.9)));
+    console.log("Scene progress changed to " + line.style.strokeDashoffset + " " + event.progress);
+});
 
 /////////////////////////////////////////////////////////////////////
 //  Letter Animation (Name)

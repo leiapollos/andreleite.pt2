@@ -29,8 +29,18 @@ header h1 {
   overflow: hidden;
 }
 .paper-plane {
-  height: 200px;
+  height: 100px;
   position: relative;
-  top: 50%;
-  left: 0%;
+  top: 90%;
+  left: 0;
+}
+.line {
+  position: relative;
+  top: 84%;
+  left: 50px;
+  width: 100%;
+  @include media("<=452px") {
+    top: 78%;
+    left: 0;
+  }
 }
