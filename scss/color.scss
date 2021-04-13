@@ -8,3 +8,9 @@ $background-color-hero: linear-gradient(
   rgba(35, 182, 204, 1) 50%,
   rgba(34, 169, 189, 1) 59%
 );
+
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf")
+    format("opentype");
+}

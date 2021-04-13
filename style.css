@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
+}
 nav {
   z-index: 999;
   position: fixed;
@@ -20,6 +28,12 @@ nav .logo {
 nav .logo .logo-image {
   width: 25px;
   height: 25px;
+}
+nav .logo h4 {
+  margin-left: 1px;
+  margin-top: -6px;
+  font-family: Summer;
+  font-size: 25px;
 }
 nav .nav-links {
   display: flex;
@@ -115,6 +129,10 @@ nav .burger div {
   }
 }
 
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
+}
 .background-parallax {
   background-position: center center;
   background-repeat: no-repeat;
@@ -134,6 +152,9 @@ nav .burger div {
 #logo-name .smaller-letters path:nth-child(n) {
   transform: scale(0.85) translateX(3%);
   transform-origin: center;
+}
+#logo-name .parallax {
+  stroke: white;
 }
 @keyframes line-anim {
   to {
@@ -245,27 +266,6 @@ nav .burger div {
   font-family: "Summer";
   src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-header,
-footer {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #23b6cc;
-  position: relative;
-}
-
-header h1 {
-  font-size: 60px;
-}
-
 .animation {
   height: 100vh;
   background: #23b6cc;
@@ -283,7 +283,7 @@ header h1 {
   top: 82%;
   left: 5vw;
   right: 5vw;
-  margin-right: 5vw;
+  margin-right: 100%;
   width: 90%;
 }
 @media (max-width: 452px) {
@@ -334,24 +334,47 @@ header h1 {
   margin-top: 200px;
   transform: translateX(84vw);
 }
-
-.ist p {
+.animation .ist p {
   font-family: Summer;
   font-size: 2em;
   color: white;
   transform: rotate(-9deg) translate(-0.4em, -0.2em);
 }
-.ist p.years {
+.animation .ist p.years {
   font-size: 1.4em;
 }
-.ist .istlogo {
+.animation .ist .istlogo {
   width: 200px;
 }
-
-.unknown {
+.animation .unknown {
   font-family: Summer;
   font-size: 4em;
   color: white;
+}
+
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header,
+footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #23b6cc;
+  position: relative;
+}
+
+header h1 {
+  font-size: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

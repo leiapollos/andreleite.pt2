@@ -42,7 +42,7 @@ scene.on("progress", function (event) {
 
     const line = document.getElementById("line");
     //line.style.width = (event.progress*100).toString() + "%";
-    line.style.strokeDashoffset = ((1920-(event.progress*1920*0.9)));
+    line.style.strokeDashoffset = ((1920-(event.progress*1920*0.85)));
     //console.log("Scene progress changed to " + line.style.strokeDashoffset + " " + event.progress);
     for(var i = 0; i < numberOfElements; i++){
       if(event.progress*100>=((i)*(100/numberOfElements))+10){

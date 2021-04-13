@@ -1,3 +1,5 @@
+@import "color.scss";
+
 .background-parallax {
   background-position: center center;
   background-repeat: no-repeat;
@@ -8,6 +10,7 @@
 }
 
 #logo-name {
+  $letters-color: white;
   height: 100vh;
   g:nth-child(n) {
     display: none;
@@ -16,6 +19,10 @@
   .smaller-letters path:nth-child(n) {
     transform: scale(0.85) translateX(3%);
     transform-origin: center;
+  }
+
+  .parallax {
+    stroke: $letters-color;
   }
 
   @keyframes line-anim {
@@ -29,7 +36,7 @@
       fill: transparent;
     }
     to {
-      fill: white;
+      fill: $letters-color;
     }
   }
 

@@ -2,11 +2,9 @@
 @import "./scss/color.scss";
 @import "./scss/navbar.scss";
 @import "./scss/hero.scss";
-@font-face {
-  font-family: "Summer";
-  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf")
-    format("opentype");
-}
+@import "./scss/cameraAnimation.scss";
+@import "./scss/projects.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -25,92 +23,4 @@ footer {
 }
 header h1 {
   font-size: 60px;
-}
-.animation {
-  height: 100vh;
-  background: rgba(35, 182, 204, 1);
-  position: relative;
-  overflow: hidden;
-  .paper-plane {
-    height: 100px;
-    position: relative;
-    top: 90%;
-    left: 0;
-  }
-  .line {
-    position: relative;
-    top: 82%;
-    left: 5vw;
-    right: 5vw;
-    margin-right: 5vw;
-    width: 90%;
-    @include media("<=452px") {
-      top: 78%;
-      left: 0;
-    }
-  }
-
-  .elementsToReveal {
-    position: absolute;
-    opacity: 0;
-    -webkit-transform: translateX(-40px);
-    -moz-transform: translateX(-40px);
-    -ms-transform: translateX(-40px);
-    -o-transform: translateX(-40px);
-    transform: translateX(-40px);
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
-    &.visible {
-      opacity: 1;
-      -webkit-transform: none;
-      -moz-transform: none;
-      -ms-transform: none;
-      -o-transform: none;
-      transform: none;
-    }
-    &:nth-child(1) {
-      margin-top: 50px;
-      transform: translateX(10vw);
-    }
-    &:nth-child(2) {
-      margin-top: 50px;
-      transform: translateX(36vw);
-    }
-    &:nth-child(3) {
-      margin-top: 100px;
-      transform: translateX(52vw);
-    }
-    &:nth-child(4) {
-      margin-top: 150px;
-      transform: translateX(68vw);
-    }
-    &:nth-child(5) {
-      margin-top: 200px;
-      transform: translateX(84vw);
-    }
-  }
-}
-.ist {
-  p {
-    font-family: Summer;
-    font-size: 2em;
-    color: white;
-    transform: rotate(-9deg) translate(-0.4em, -0.2em);
-    &.years {
-      font-size: 1.4em;
-    }
-  }
-
-  .istlogo {
-    width: 200px;
-  }
-}
-
-.unknown {
-  font-family: Summer;
-  font-size: 4em;
-  color: white;
 }
