@@ -94,7 +94,16 @@ header h1 {
   }
 }
 .ist {
-  font-family: "Summer";
+  p {
+    font-family: Summer;
+    font-size: 2em;
+    color: white;
+    transform: rotate(-9deg) translate(-0.4em, -0.2em);
+    &.years {
+      font-size: 1.4em;
+    }
+  }
+
   .istlogo {
     width: 200px;
   }

@@ -335,8 +335,14 @@ header h1 {
   transform: translateX(74vw);
 }
 
-.ist {
-  font-family: "Summer";
+.ist p {
+  font-family: Summer;
+  font-size: 2em;
+  color: white;
+  transform: rotate(-9deg) translate(-0.4em, -0.2em);
+}
+.ist p.years {
+  font-size: 1.4em;
 }
 .ist .istlogo {
   width: 200px;
