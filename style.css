@@ -289,6 +289,7 @@ header h1 {
   }
 }
 .animation .elementsToReveal {
+  position: absolute;
   opacity: 0;
   -webkit-transform: translateX(-40px);
   -moz-transform: translateX(-40px);
@@ -315,19 +316,23 @@ header h1 {
 }
 .animation .elementsToReveal:nth-child(2) {
   margin-top: 50px;
-  transform: translateX(20vw);
+  transform: translateX(26vw);
 }
 .animation .elementsToReveal:nth-child(3) {
   margin-top: 100px;
-  transform: translateX(40vw);
+  transform: translateX(42vw);
 }
 .animation .elementsToReveal:nth-child(4) {
   margin-top: 150px;
-  transform: translateX(60vw);
+  transform: translateX(58vw);
 }
 .animation .elementsToReveal:nth-child(5) {
   margin-top: 200px;
-  transform: translateX(80vw);
+  transform: translateX(74vw);
+}
+
+.istlogo {
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
