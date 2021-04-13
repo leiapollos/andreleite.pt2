@@ -320,19 +320,19 @@ header h1 {
 }
 .animation .elementsToReveal:nth-child(2) {
   margin-top: 50px;
-  transform: translateX(26vw);
+  transform: translateX(36vw);
 }
 .animation .elementsToReveal:nth-child(3) {
   margin-top: 100px;
-  transform: translateX(42vw);
+  transform: translateX(52vw);
 }
 .animation .elementsToReveal:nth-child(4) {
   margin-top: 150px;
-  transform: translateX(58vw);
+  transform: translateX(68vw);
 }
 .animation .elementsToReveal:nth-child(5) {
   margin-top: 200px;
-  transform: translateX(74vw);
+  transform: translateX(84vw);
 }
 
 .ist p {
@@ -346,6 +346,12 @@ header h1 {
 }
 .ist .istlogo {
   width: 200px;
+}
+
+.unknown {
+  font-family: Summer;
+  font-size: 4em;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
