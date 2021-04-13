@@ -2,7 +2,11 @@
 @import "./scss/color.scss";
 @import "./scss/navbar.scss";
 @import "./scss/hero.scss";
-
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf")
+    format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -89,7 +93,9 @@ header h1 {
     }
   }
 }
-
-.istlogo {
-  width: 200px;
+.ist {
+  font-family: "Summer";
+  .istlogo {
+    width: 200px;
+  }
 }

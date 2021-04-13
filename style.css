@@ -241,6 +241,10 @@ nav .burger div {
     transform-origin: center;
   }
 }
+@font-face {
+  font-family: "Summer";
+  src: url("https://andreleite.pt/fonts/Summer Font Regular.otf") format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -331,7 +335,10 @@ header h1 {
   transform: translateX(74vw);
 }
 
-.istlogo {
+.ist {
+  font-family: "Summer";
+}
+.ist .istlogo {
   width: 200px;
 }
 
