@@ -268,25 +268,66 @@ header h1 {
   position: relative;
   overflow: hidden;
 }
-
-.paper-plane {
+.animation .paper-plane {
   height: 100px;
   position: relative;
   top: 90%;
   left: 0;
 }
-
-.line {
+.animation .line {
   position: relative;
-  top: 84%;
-  left: 50px;
-  width: 100%;
+  top: 82%;
+  left: 5vw;
+  right: 5vw;
+  margin-right: 5vw;
+  width: 90%;
 }
 @media (max-width: 452px) {
-  .line {
+  .animation .line {
     top: 78%;
     left: 0;
   }
+}
+.animation .elementsToReveal {
+  opacity: 0;
+  -webkit-transform: translateX(-40px);
+  -moz-transform: translateX(-40px);
+  -ms-transform: translateX(-40px);
+  -o-transform: translateX(-40px);
+  transform: translateX(-40px);
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+.animation .elementsToReveal.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+.animation .elementsToReveal:nth-child(1) {
+  margin-top: 50px;
+  transform: translateX(10vw);
+}
+.animation .elementsToReveal:nth-child(2) {
+  margin-top: 50px;
+  transform: translateX(20vw);
+}
+.animation .elementsToReveal:nth-child(3) {
+  margin-top: 100px;
+  transform: translateX(40vw);
+}
+.animation .elementsToReveal:nth-child(4) {
+  margin-top: 150px;
+  transform: translateX(60vw);
+}
+.animation .elementsToReveal:nth-child(5) {
+  margin-top: 200px;
+  transform: translateX(80vw);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,16 +11,16 @@ tween.to(".paper-plane", {
   ease: Linear.easeNone,
   motionPath: {
     path: [
-      { x: width * 0, y: bottom },
+      { x: width * 0, y: bottom-30 },
       { x: width * 0.1, y: bottom },
-      { x: width * 0.3, y: bottom },
-      { x: width * 0.4, y: bottom },
+      { x: width * 0.3, y: bottom-30 },
+      { x: width * 0.4, y: bottom-30 },
       { x: width * 0.6, y: bottom },
-      { x: width * 0.7, y: bottom },
-      { x: width * 0.9, y: bottom },
+      { x: width * 0.7, y: bottom-30 },
+      { x: width * 0.9, y: bottom-30 },
     ],
-    curviness: 1.0,
-    autoRotate: false,
+    curviness: 0.5,
+    autoRotate: true,
   },
 });
 
@@ -34,13 +34,36 @@ const scene = new ScrollMagic.Scene({
   .setPin(".animation")
   .addTo(controller);
 
+
+var revealElements = document.getElementsByClassName("elementsToReveal");
+const numberOfElements = revealElements.length;
+
 scene.on("progress", function (event) {
 
     const line = document.getElementById("line");
     //line.style.width = (event.progress*100).toString() + "%";
     line.style.strokeDashoffset = ((1920-(event.progress*1920*0.9)));
-    console.log("Scene progress changed to " + line.style.strokeDashoffset + " " + event.progress);
+    //console.log("Scene progress changed to " + line.style.strokeDashoffset + " " + event.progress);
+    for(var i = 0; i < numberOfElements; i++){
+      if(event.progress*100>=((i)*(100/numberOfElements))+10){
+        //console.log(i + " on");
+        addVisible(revealElements[i]);
+      }else{
+        
+        //console.log(i + " off");
+        removeVisible(revealElements[i]);
+      }
+    }
 });
+
+function addVisible(element){
+  if(!element.classList.contains('visible'))
+    element.classList.add('visible');
+}
+function removeVisible(element){
+  if(element.classList.contains('visible'))
+    element.classList.remove('visible');
+}
 
 /////////////////////////////////////////////////////////////////////
 //  Letter Animation (Name)
