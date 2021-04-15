@@ -4,6 +4,13 @@
 @import "./scss/hero.scss";
 @import "./scss/cameraAnimation.scss";
 @import "./scss/projects.scss";
+@import "./scss/fullpage.min.scss";
+@import "./scss/footer.scss";
+
+html {
+  scroll-behavior: smooth;
+  background: $blue;
+}
 
 * {
   margin: 0;
@@ -12,8 +19,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-header,
-footer {
+header {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,4 +29,16 @@ footer {
 }
 header h1 {
   font-size: 60px;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  position: relative;
+  h1 {
+    font-size: 60px;
+  }
 }

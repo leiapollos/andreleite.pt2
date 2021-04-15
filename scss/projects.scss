@@ -1,1 +1,16 @@
 @import "color.scss";
+
+.projects {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  position: relative;
+  h1 {
+    font-size: 60px;
+  }
+  .project {
+    color: white;
+  }
+}

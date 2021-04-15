@@ -1,5 +1,19 @@
 @import "color.scss";
 
+.section {
+  &.s1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    position: relative;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
 .background-parallax {
   background-position: center center;
   background-repeat: no-repeat;
@@ -7,6 +21,10 @@
   background-size: cover;
   background: $background-color-hero;
   z-index: -999;
+  position: inherit !important;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #logo-name {

@@ -1,7 +1,17 @@
 /////////////////////////////////////////////////////////////////////
+//  Full Page Animation
+/////////////////////////////////////////////////////////////////////
+
+/*new fullpage('#fullpage', {
+  navigation: true,
+});*/
+
+
+/////////////////////////////////////////////////////////////////////
 //  Object Path
 /////////////////////////////////////////////////////////////////////
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollToPlugin)
 
 const tween = gsap.timeline();
 const bottom =  0;
@@ -56,6 +66,18 @@ scene.on("progress", function (event) {
     }
 });
 
+scene.on("end", function (event) {
+  if(event.scrollDirection == "FORWARD"){
+    gsap.to(window, {duration: 0.05, scrollTo:"#project"});
+  }
+});
+
+scene.on("start", function (event) {
+  if(event.scrollDirection == "REVERSE"){
+    gsap.to(window, {duration: 0.05, scrollTo:"#parallax"});
+  }
+});
+
 function addVisible(element){
   if(!element.classList.contains('visible'))
     element.classList.add('visible');
@@ -64,6 +86,36 @@ function removeVisible(element){
   if(element.classList.contains('visible'))
     element.classList.remove('visible');
 }
+
+const parallax = new ScrollMagic.Scene({
+  triggerElement: ".background-parallax",
+  duration: 20,
+  triggerHook: 0,
+})
+  .setPin(".background-parallax")
+  .addTo(controller);
+
+parallax.on("end", function (event) {
+  if(event.scrollDirection == "FORWARD"){
+    gsap.to(window, {duration: 0.05, scrollTo:"#camera"});
+  }
+});
+
+const project = new ScrollMagic.Scene({
+  triggerElement: ".projects",
+  duration: 20,
+  triggerHook: 0,
+})
+  .setPin(".projects")
+  .addTo(controller);
+
+project.on("start", function (event) {
+  if(event.scrollDirection == "REVERSE"){
+    gsap.to(window, {duration: 0.05, scrollTo:"#camera"});
+  }
+});
+
+
 
 /////////////////////////////////////////////////////////////////////
 //  Letter Animation (Name)
@@ -150,3 +202,7 @@ const navSlide = () => {
 };
 
 navSlide();
+
+/////////////////////////////////////////////////////////////////////
+//  Projects
+/////////////////////////////////////////////////////////////////////

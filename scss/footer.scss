@@ -1,0 +1,10 @@
+@import "color.scss";
+
+footer {
+  height: 11.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $footer-color;
+  position: relative;
+}
