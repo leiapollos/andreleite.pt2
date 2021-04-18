@@ -3,13 +3,12 @@
 $text-color: white;
 nav {
   z-index: 999;
+  width: 100%;
   position: fixed;
   display: flex;
   top: 0;
-  left: 0;
-  right: 0;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 3%;
   align-items: center;
   min-height: 8vh;
   background-color: transparent;
@@ -65,6 +64,7 @@ nav {
   .burger {
     display: none;
     cursor: pointer;
+    margin-right: 2%;
     div {
       width: 30px;
       height: 2px;
@@ -107,7 +107,7 @@ nav {
       border-top: 1.5vh solid $blue;
       border-bottom: 1.5vh solid $blue;
       border-left: 3vw solid $blue;
-      border-right: 6vw solid $blue;
+      border-right: 3vw solid $blue;
 
       li {
         opacity: 0;

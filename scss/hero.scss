@@ -78,6 +78,10 @@
       transform: scale(1);
     }
   }
+  &.mobile {
+    display: none;
+    transform: translateX(15%);
+  }
 }
 
 .scroll-downs {
@@ -149,13 +153,23 @@
 
   #logo-name {
     position: absolute;
-    top: 15vh;
-    right: -8vw;
-    height: 30vh;
-    width: 90vw;
+    top: 15%;
+    right: 0;
+    height: 30%;
+    width: 100%;
     .smaller-letters path:nth-child(n) {
-      transform: scale(0.85) translate(-50%, 120%);
+      transform: scale(0.85) translate(-20%, 120%);
       transform-origin: center;
+    }
+    .bigger-letters path:nth-child(n) {
+      transform: translate(20%, 0);
+      transform-origin: center;
+    }
+    .toy {
+      display: none !important;
+      &.mobile {
+        display: block !important;
+      }
     }
   }
 }

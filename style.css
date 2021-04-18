@@ -8,13 +8,12 @@
 }
 nav {
   z-index: 999;
+  width: 100%;
   position: fixed;
   display: flex;
   top: 0;
-  left: 0;
-  right: 0;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 3%;
   align-items: center;
   min-height: 8vh;
   background-color: transparent;
@@ -62,6 +61,7 @@ nav .nav-links .underline {
 nav .burger {
   display: none;
   cursor: pointer;
+  margin-right: 2%;
 }
 nav .burger div {
   width: 30px;
@@ -95,7 +95,7 @@ nav .burger div {
     border-top: 1.5vh solid #23b6cc;
     border-bottom: 1.5vh solid #23b6cc;
     border-left: 3vw solid #23b6cc;
-    border-right: 6vw solid #23b6cc;
+    border-right: 3vw solid #23b6cc;
   }
   nav .nav-links li {
     opacity: 0;
@@ -202,6 +202,10 @@ nav .burger div {
     transform: scale(1);
   }
 }
+#logo-name.mobile {
+  display: none;
+  transform: translateX(15%);
+}
 
 .scroll-downs {
   position: absolute;
@@ -268,14 +272,24 @@ nav .burger div {
 
   #logo-name {
     position: absolute;
-    top: 15vh;
-    right: -8vw;
-    height: 30vh;
-    width: 90vw;
+    top: 15%;
+    right: 0;
+    height: 30%;
+    width: 100%;
   }
   #logo-name .smaller-letters path:nth-child(n) {
-    transform: scale(0.85) translate(-50%, 120%);
+    transform: scale(0.85) translate(-20%, 120%);
     transform-origin: center;
+  }
+  #logo-name .bigger-letters path:nth-child(n) {
+    transform: translate(20%, 0);
+    transform-origin: center;
+  }
+  #logo-name .toy {
+    display: none !important;
+  }
+  #logo-name .toy.mobile {
+    display: block !important;
   }
 }
 @font-face {
