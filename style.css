@@ -66,7 +66,7 @@ nav .burger {
 nav .burger div {
   width: 30px;
   height: 2px;
-  background-color: #151515;
+  background-color: white;
   margin: 6px;
   transition: all 0.5s ease;
 }
@@ -106,6 +106,9 @@ nav .burger div {
   nav .burger {
     display: block;
     z-index: 2;
+  }
+  nav .burger.toggle div {
+    background-color: #151515;
   }
   nav .burger.toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 1px);
@@ -272,7 +275,7 @@ nav .burger div {
 
   #logo-name {
     position: absolute;
-    top: 15%;
+    top: 30%;
     right: 0;
     height: 30%;
     width: 100%;

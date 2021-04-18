@@ -66,7 +66,7 @@ scene.on("progress", function (event) {
     }
 });
 
-scene.on("end", function (event) {
+/*scene.on("end", function (event) {
   if(event.scrollDirection == "FORWARD"){
     gsap.to(window, {duration: 0.05, scrollTo:"#project"});
   }
@@ -76,7 +76,7 @@ scene.on("start", function (event) {
   if(event.scrollDirection == "REVERSE"){
     gsap.to(window, {duration: 0.05, scrollTo:"#parallax"});
   }
-});
+});*/
 
 function addVisible(element){
   if(!element.classList.contains('visible'))
@@ -87,7 +87,7 @@ function removeVisible(element){
     element.classList.remove('visible');
 }
 
-const parallax = new ScrollMagic.Scene({
+/*const parallax = new ScrollMagic.Scene({
   triggerElement: ".background-parallax",
   duration: 20,
   triggerHook: 0,
@@ -113,7 +113,7 @@ project.on("start", function (event) {
   if(event.scrollDirection == "REVERSE"){
     gsap.to(window, {duration: 0.05, scrollTo:"#camera"});
   }
-});
+});*/
 
 
 

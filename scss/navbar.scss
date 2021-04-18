@@ -68,7 +68,7 @@ nav {
     div {
       width: 30px;
       height: 2px;
-      background-color: $black;
+      background-color: white;
       margin: 6px;
       transition: all 0.5s ease;
     }
@@ -122,6 +122,9 @@ nav {
       display: block;
       z-index: 2;
       &.toggle {
+        div {
+          background-color: $black;
+        }
         .line1 {
           transform: rotate(-45deg) translate(-5px, 1px);
         }
