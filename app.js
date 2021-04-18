@@ -17,9 +17,11 @@ const tween = gsap.timeline();
 const bottom =  0;
 const width = window.innerWidth;
 tween.to(".paper-plane", {
-  duration: 7,
+  duration: 3,
   ease: Linear.easeNone,
-  motionPath: {
+  autoRotate: true,
+  motionPath: {path: "#line", autoRotate: true,},
+  /*{
     path: [
       { x: width * 0, y: bottom-30 },
       { x: width * 0.1, y: bottom },
@@ -31,13 +33,13 @@ tween.to(".paper-plane", {
     ],
     curviness: 0.5,
     autoRotate: true,
-  },
+  },*/
 });
 
 const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
   triggerElement: ".animation",
-  duration: 3000,
+  duration: 2000,
   triggerHook: 0,
 })
   .setTween(tween)
@@ -171,7 +173,10 @@ var parallaxInstance = new Parallax(parallaxScene, {
 });
 parallaxInstance.limit(0, false);
 /**/
-
+VanillaTilt.init(document.querySelectorAll(".card"), {
+  max: 25,
+  speed: 50
+});
 /////////////////////////////////////////////////////////////////////
 //  Navbar
 /////////////////////////////////////////////////////////////////////

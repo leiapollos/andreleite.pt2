@@ -8,15 +8,15 @@
   .paper-plane {
     height: 100px;
     position: relative;
-    top: 90%;
+    top: 75%;
     left: 0;
+    transform-origin: 50px 50px;
   }
   .line {
     position: relative;
-    top: 82%;
+    top: 75%;
     left: 5vw;
     right: 5vw;
-    margin-right: 100%;
     width: 90%;
     @include media("<=452px") {
       top: 78%;

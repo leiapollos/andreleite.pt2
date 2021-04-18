@@ -30,13 +30,19 @@
 #logo-name {
   $letters-color: white;
   height: 100vh;
+  transform-style: preserve-3d;
   g:nth-child(n) {
-    display: none;
     width: auto;
   }
   .smaller-letters path:nth-child(n) {
     transform: scale(0.85) translateX(3%);
     transform-origin: center;
+  }
+  .smaller-letters {
+    transform: translateZ(20px);
+  }
+  .bigger-letters {
+    transform: translateZ(20px);
   }
 
   .parallax {

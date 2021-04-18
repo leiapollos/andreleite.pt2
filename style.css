@@ -85,7 +85,7 @@ nav .burger div {
     top: 0;
     width: 100vw;
     background: #23b6cc;
-    background: linear-gradient(157deg, white 64%, #f8f8f8 64%);
+    background: linear-gradient(157deg, white 64%, rgba(255, 255, 255, 0.8) 64%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,14 +163,20 @@ nav .burger div {
 
 #logo-name {
   height: 100vh;
+  transform-style: preserve-3d;
 }
 #logo-name g:nth-child(n) {
-  display: none;
   width: auto;
 }
 #logo-name .smaller-letters path:nth-child(n) {
   transform: scale(0.85) translateX(3%);
   transform-origin: center;
+}
+#logo-name .smaller-letters {
+  transform: translateZ(20px);
+}
+#logo-name .bigger-letters {
+  transform: translateZ(20px);
 }
 #logo-name .parallax {
   stroke: white;
@@ -308,15 +314,15 @@ nav .burger div {
 .animation .paper-plane {
   height: 100px;
   position: relative;
-  top: 90%;
+  top: 75%;
   left: 0;
+  transform-origin: 50px 50px;
 }
 .animation .line {
   position: relative;
-  top: 82%;
+  top: 75%;
   left: 5vw;
   right: 5vw;
-  margin-right: 100%;
   width: 90%;
 }
 @media (max-width: 452px) {
